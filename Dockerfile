@@ -2,7 +2,7 @@ FROM pandoc/latex
 MAINTAINER Tru Huynh <tru@pasteur.fr>
 
 # build env
-RUN apk update && apk upgrade && apk add --no-cache bash\
+RUN apk update && apk upgrade && apk add --no-cache bash &&\
 	apk info -v > /apk-info-v.txt && \
 	tlmgr update --self && tlmgr update --all && \
 	tlmgr install \
